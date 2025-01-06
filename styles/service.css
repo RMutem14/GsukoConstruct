@@ -1,0 +1,172 @@
+.architecture {
+  background-color: #224435;
+}
+
+.architecture .contenaire {
+  display: flex;
+  background-color: #224435;
+  color: #fffde6;
+}
+
+.architecture .carte {
+  background-color: #224435;
+}
+
+.commerciale h2 {
+  text-align: left;
+}
+
+.genieCivil .contenaire {
+  display: flex;
+}
+
+.hydraulique {
+  background-image: url(../image/hydrau.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hydraulique .contenaires {
+  background-color: rgba(255, 253, 230, 0);
+}
+
+.hydraulique .carte {
+  background-color: rgba(255, 253, 230, 0);
+}
+
+@media (max-width: 900px) {
+  .banière img {
+    width: 400px;
+    padding-top: 42px;
+  }
+
+  .banière .details {
+    text-align: center;
+  }
+
+  .contenaire,
+  .contenaires {
+    align-items: center;
+  }
+  .contenaires {
+    flex-direction: column;
+  }
+
+  .architecture h2 {
+    text-align: center;
+  }
+
+  .architecture .carte {
+    text-align: center;
+  }
+
+  .genieCivil img {
+    width: 400px;
+  }
+
+  .genieCivil .contenaire{
+    flex-direction: column-reverse;
+  }
+
+  .genieCivil .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .genieCivil p{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .genieCivil h2 {
+    text-align: center;
+  }
+
+  .commerciale img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .commerciale .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .commerciale h2 {
+    text-align: center;
+  }
+
+  .commerciale .gift {
+    display: block;
+    width: 40px;
+    height: 20px;
+  }
+
+  .commerciale .accordions {
+    text-align: center;
+  }
+
+  .commerciale .details {
+    display: block;
+  }
+
+  .hydraulique {
+    position: relative;
+  }
+  .hydraulique .contenaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hydraulique h2, .hydraulique h3,
+  .hydraulique p {
+    z-index: 3;
+    text-align: center;
+  }
+
+  .hydraulique .carte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fleche {
+    background: #ddeee6;
+    clip-path: polygon(90% 1%, 100% 50%, 90% 100%, 0% 100%, 11% 49%, 0 0);
+    width: 40%;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+
+  .hydraulique .position {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 253, 230, 0.5);
+  }
+}
+
+
+@media (min-width:901px) {
+  .architecture .contenaire{
+    background-color: rgba(255, 253, 230, 0);
+  }
+
+  .architecture .carte{
+    padding: 0;
+  }
+}

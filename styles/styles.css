@@ -1,0 +1,887 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fffde6;
+  color: #233939;
+  position: relative;
+  font-size: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 12vh;
+  position: fixed;
+  z-index: 4;
+  background-color: #fffde6;
+}
+
+header .imgBox {
+  width: 20%;
+}
+
+header .imgBox img {
+  width: 50%;
+}
+
+a {
+  color: #233939;
+  padding-bottom: 0.5rem;
+}
+
+/*Menu desktop*/
+
+.navDesktop ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navDesktop .menu a.active {
+  border-bottom: 1px solid #233939;
+}
+
+/*Menu burger*/
+
+.burger img {
+  display: none;
+  width: 35px;
+}
+
+/*Cartes*/
+
+.card {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carde {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.carte {
+  width: 250px;
+  height: auto;
+  padding: 30px;
+  background: #ddeee6;
+}
+
+.cartes {
+  width: 350px;
+  height: auto;
+  background: #fffde6;
+}
+
+/*Button*/
+.btn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #224435;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fffde6;
+  transition: 0.5s;
+}
+
+.btna {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #fffde6;
+  padding: 15px;
+  border-radius: 10px;
+  color: #224435;
+  transition: 0.5s;
+  border: 2px solid #224435;
+}
+
+.btn:hover {
+  background: #fffde6;
+  color: #224435;
+}
+
+.btna:hover {
+  color: #fffde6;
+  background: #224435;
+}
+
+/*beauté*/
+h2 {
+  font-family: "Syne";
+}
+
+p {
+  font-size: 1.2rem;
+  font-family: "Overpass";
+}
+
+/*baniere du site*/
+.banière p {
+  margin-bottom: 20px;
+}
+
+/*presentation de la société*/
+
+.presentation h3,
+.nous h3,
+.realisation h3,
+.temoignage h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.realisation img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.temoignage .accordions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.temoignage .contentBx {
+  height: 100%;
+}
+
+.temoignage .details {
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s;
+  overflow-y: auto;
+  padding-left: 30px;
+  display: none;
+}
+
+.temoignage .contentBx.active .details {
+  height: 100%;
+}
+
+.temoignage .gift {
+  width: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px;
+  display: none;
+}
+
+.temoignage .gift:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.temoignage .tem {
+  display: none;
+}
+
+.contact,.contacte {
+  background-image: url(/image/contact.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact .contenaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(221, 238, 230, 0);
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  header {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .imgBox {
+    width: 20%;
+  }
+
+  header .imgBox img {
+    width: 80%;
+  }
+
+  .burger {
+    width: 50px;
+  }
+
+  .burger img {
+    display: block;
+    position: absolute;
+    top: 30px;
+    z-index: 3;
+  }
+
+  .navDesktop {
+    background-color: rgb(122, 173, 173, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    margin-left: -100%;
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+
+  .navDesktop.mobile {
+    margin-left: 0;
+  }
+
+  .navDesktop ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .carte {
+    width: 80%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .temoignage .tem {
+    display: block;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .banière {
+    padding-top: 80px;
+  }
+  
+  .banière .contenaire{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .banière .imgBox {
+    width: 80%;
+  }
+
+  .banière img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .banière h1,
+  .banière .h1 {
+    font-size: 2rem;
+  }
+
+  .banière p {
+    font-size: 1.2rem;
+  }
+
+  .banière .btn,
+  .banière .btna {
+    padding: 0.6rem;
+  }
+
+  .presentation .contenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service h2{
+    text-align: center;
+  }
+
+  .nous .contenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nous .imgBox {
+    max-width: 70%;
+  }
+
+  .nous img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .nous h2{
+    text-align: center;
+  }
+
+  .nous h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nous .carte{
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .nous span {
+    background: #ddeee6;
+    width: 40%;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  }
+
+  .realisation .cartes {
+    width: 50%;
+  }
+  .realisation h2{
+    text-align: center;
+  }
+
+  .temoignage .mot {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+
+  .temoignage .imgBox {
+    max-width: 80%;
+  }
+
+  .temoignage img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .temoignage .contenaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  br{
+    display: none;
+  }
+
+  .contact {
+    position: relative;
+    width: 100%;
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .position {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 253, 230, 0.5);
+      z-index: 1;
+    }
+
+    form {
+      width: 90%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+    }
+
+    input,
+    textarea {
+      padding: 13px;
+      border-radius: 6px;
+    }
+
+    h2 {
+      z-index: 2;
+    }
+
+    label {
+      font-size: 1.2rem;
+      text-align: left;
+    }
+
+    button {
+      width: 40%;
+      margin-top: 10px;
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  header .imgBox img {
+    width: 100%;
+  }
+
+  .banière{
+    width: 100%;
+    .details{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn,.btna{
+      font-size: 1rem;
+    }
+
+    h1{
+      text-align: center;
+    }
+  }
+
+  br{
+    display: none;
+  }
+
+  .nous{
+    img{
+      width: 100%;
+    }
+  }
+
+  .menu{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 901px) {
+  /*Contenaire*/
+  .presentation h2,
+  .service h2,
+  .nous h2,
+  .realisation h2,
+  .temoignage h2 {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .banière {
+    height: 100vh;
+    position: relative;
+    padding-top: 70px;
+
+    .contenaire {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .banière .imgBx {
+    width: 40%;
+  }
+
+  .banière .details {
+    width: 60%;
+  }
+
+  .banière h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+
+  .banière .h1 {
+    font-size: 3.5rem;
+    font-family: "Syne";
+  }
+
+  .banière p {
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+  }
+
+  .banière img {
+    width: 350px;
+    height: 450px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+
+  .presentation {
+    background: #ddeee6;
+    height: 90vh;
+    position: relative;
+    margin-bottom: 80px;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .presentation p {
+    font-size: 1rem;
+  }
+
+  .service {
+    height: 100vh;
+    position: relative;
+    margin-bottom: 80px;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .service .carte {
+    background-color: #fffde6;
+  }
+
+  .nous {
+    height: 180vh;
+    position: relative;
+    margin-bottom: 20px;
+
+    .contenaire {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .card{
+      flex-direction: column;
+    }
+
+    .carte{
+      width: 400px;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+  .nous h2 {
+    margin-bottom: 40px;
+  }
+
+  .nous span {
+    background: #ddeee6;
+    font-size: 2rem;
+    width: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .nous p {
+    margin-left: 70px;
+    margin-bottom: 20px;
+  }
+
+  .nous img {
+    object-fit: cover;
+    width: 400px;
+    height: 180vh;
+  }
+
+  .nous h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .realisation {
+    position: relative;
+    height: 90vh;
+    background-color: #ddeee6;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .realisation .contenaires {
+    padding: 40px;
+  }
+  .realisation .carte {
+    width: 400px;
+  }
+
+  .temoignage {
+    position: relative;
+    height: 90vh;
+
+    .contenaire {
+      display: flex;
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .temoignage .details {
+    display: block;
+  }
+
+  .temoignage .gift {
+    display: block;
+  }
+
+  .temoignage h3 {
+    width: 550px;
+  }
+
+  .contact {
+    position: relative;
+    height: 100vh;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: "Overpass";
+  }
+
+  .contact button {
+    width: 30%;
+  }
+
+  .contact .position {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 253, 230, 0.5);
+    z-index: 1;
+  }
+
+  .hydraulique {
+    height: 80vh;
+    position: relative;
+
+    .contenaire {
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .hydraulique .position {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 253, 230, 0.5);
+  }
+  .fleche {
+    background: #ddeee6;
+    clip-path: polygon(90% 1%, 100% 50%, 90% 100%, 0% 100%, 11% 49%, 0 0);
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: 1.5rem;
+    font-family: "Syne";
+  }
+
+  .contentBx p, .contentBx ul{
+    margin-bottom: 15px;
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+}
+
+.sociale a {
+  padding: 10px;
+  background-color: #ddeee6;
+  margin: 10px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.sociale a i {
+  font-size: 2rem;
+  opacity: 0.9;
+}
+
+footer {
+  width: 100%;
+}
+
+footer .menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+footer .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.sociale {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.sociale a:hover {
+  background-color: #224435;
+  color: #ddeee6;
+}
+
+.sociale a:hover i {
+  color: #ddeee6;
+  transition: 0.5s;
+}
+
+.copy {
+  background-color: #fffde6;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url(../fonts/Syne-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Overpass";
+  src: url(../fonts/Overpass-VariableFont_wght.ttf);
+}
+
+h1,h2,h3{
+  font-family: "Syne";
+}
+
+a,p,button{
+  font-family: "Overpass";
+}

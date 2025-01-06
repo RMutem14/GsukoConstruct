@@ -1,0 +1,472 @@
+.projets {
+  .card {
+    display: flex;
+    gap: 40px;
+  }
+
+  .carte {
+    width: 550px;
+    height: auto;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+.tendance {
+  padding: 50px;
+  background-color: #ddeee6;
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+  }
+
+  .carte {
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    background-color: #ddeee6;
+    border-radius: 6px;
+  }
+}
+
+.partenaire {
+  .card {
+    display: flex;
+    gap: 40px;
+  }
+
+  .carte {
+    width: 550px;
+    height: auto;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width:900px) {
+
+
+  .banière .details{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banière .contenaire{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .banière .button{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .banière .imgBx{
+    width: 80%;
+  }
+
+  .banière img{
+    width: 100%;
+  }
+
+  .projets h2{
+    text-align: center;
+  }
+
+  .projets .carte{
+    width: 80%;
+  }
+
+  .construction .contenaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .construction .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .construction .ligne {
+    text-align: center;
+    width: 80%;
+  }
+
+  .construction .carte {
+    width: 100%;
+  }
+
+  .construction .number, 
+  .construction .para,
+  .construction .li{
+    display: none;
+  }
+
+  .construction h2{
+    text-align: center;
+  }
+
+  .tendance .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tendance .carte{
+    width: 80%;
+  }
+
+  .tendance h2{
+    text-align: center;
+  }
+
+  .partenaire h2{
+    text-align: center;
+  }
+
+  .partenaire .carte{
+    width: 80%;
+  }
+
+  .rejoindre h2{
+    text-align: center;
+  }
+
+  .rejoindre .carte{
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rejoindre .fleche {
+    width: 40%;
+    height: 50px;
+    padding: 5px;
+  }
+}
+
+@media (max-width:566px) {
+  
+}
+
+
+
+@media screen and (min-width: 901px) {
+  /*section banière*/
+
+  .banière {
+    height: 100vh;
+    position: relative;
+
+    .contenaire {
+      display: flex;
+      gap: 40px;
+      background: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-55%, -50%);
+    }
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+
+    .h1 {
+      font-size: 3.5rem;
+      font-family: "Syne";
+    }
+
+    p {
+      margin-bottom: 50px;
+    }
+
+    img {
+      width: 450px;
+      height: 500px;
+      border-radius: 6px;
+    }
+
+    .details {
+      width: 85%;
+    }
+
+    .imgBx {
+      width: 25%;
+    }
+  }
+
+  .projets {
+    height: 50vh;
+    position: relative;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-55%, -50%);
+    }
+
+    .carte{
+      width: 400px;
+    }
+  }
+
+  .construction {
+    background-image: url(../image/construction.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    .position {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      margin-top: -150px;
+    }
+
+    .carte {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0);
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .number {
+      width: 50px;
+      padding: 13px;
+      text-align: center;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 40px;
+      background-color: #fff;
+    }
+
+    .number p {
+      color: black;
+      font-size: 1.5rem;
+    }
+
+    .li {
+      font-size: 5rem;
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      top: 57.4%;
+      left: -12%;
+      transform: scale(-50%, -50%);
+      z-index: 1;
+    }
+
+    .para {
+      color: #fff;
+    }
+
+    .ligne:nth-child(2) {
+      margin-top: 422px;
+    }
+
+    .number:nth-child(2) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .tendance {
+    height: 100vh;
+    position: relative;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      background: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1.8;
+      border-radius: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .partenaire {
+    background-image: url(../image/partenaire.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    position: relative;
+
+    .contenaire {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .position {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    h2 {
+      color: #fff;
+    }
+
+    h3 {
+      color: #fff;
+    }
+
+    .carte{
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .rejoindre {
+    height: 70vh;
+    position: relative;
+    background-color: #ddeee6;
+    .contenaire {
+      background-color: #fffde6;
+      width: 900px;
+      height: auto;
+      padding: 80px;
+      border-radius: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    
+    span {
+      z-index: 1;
+      font-size: 1.5rem;
+      font-family: "Syne";
+    }
+  
+    .card {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .carte {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0);
+      padding: 0;
+      flex-direction: column;
+      width: 350px;
+      height: auto;
+    }
+    
+    h2 {
+      margin-bottom: 20px;
+    }
+    
+    a {
+      border-bottom: #ddeee6;
+    }
+  }
+}
+
+.fleche {
+  background: #ddeee6;
+  width: 100%;
+  height: 50px;
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(90% 1%, 100% 50%, 90% 100%, 0% 100%, 11% 50%, 0 0);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
