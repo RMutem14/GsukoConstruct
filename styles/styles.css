@@ -190,7 +190,7 @@ p {
 }
 
 .contact,.contacte {
-  background-image: url(/image/contact.jpg);
+  background-image: url(../image/contact.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
