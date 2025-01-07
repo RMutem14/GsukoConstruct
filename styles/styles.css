@@ -272,6 +272,10 @@ p {
     display: block;
   }
 
+  .temoignage h3{
+    display: none;
+  }
+
   main {
     display: flex;
     flex-direction: column;
@@ -474,7 +478,7 @@ p {
 
   .nous{
     img{
-      width: 100%;
+      width: 300px;
     }
   }
 

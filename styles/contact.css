@@ -1,5 +1,4 @@
 .banière {
-  height: 70vh;
   position: relative;
   background-image: url(../image/hall.jpg);
   background-position: center;
@@ -44,13 +43,31 @@
 }
 
 @media (max-width: 900px) {
+
+  header{
+    margin-top: -20px;
+  }
+
+  .banière {
+    padding-top: 50px;
+    height: auto;
+  }
+
+  .banière .contenaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding-top: 10rem;
+  }
+
   .banière .details {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10rem;
     z-index: 2;
     color: #fffde6;
+    padding-bottom: 10rem;
   }
 
   .banière p {
