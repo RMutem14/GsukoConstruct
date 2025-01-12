@@ -226,7 +226,7 @@ p {
   .burger img {
     display: block;
     position: absolute;
-    top: 30px;
+    top: 20px;
     z-index: 3;
   }
 
@@ -328,6 +328,10 @@ p {
     text-align: center;
   }
 
+  .un,.deux,.trois,.quatre{
+    display: none;
+  }
+
   .nous .contenaire{
     display: flex;
     flex-direction: column;
@@ -335,7 +339,7 @@ p {
   }
 
   .nous .imgBox {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .nous img {
@@ -455,6 +459,10 @@ p {
     width: 100%;
   }
 
+  .contact button {
+    width: 50%;
+  }
+
   .banière{
     width: 100%;
     .details{
@@ -496,6 +504,7 @@ p {
   .realisation h2,
   .temoignage h2 {
     text-align: left;
+    font-size: 2.5rem;
     margin-bottom: 30px;
   }
   .banière {
